@@ -18,9 +18,10 @@
   padding: 0;
   box-sizing: border-box;
   color: #333333;
+  font-family: verdana, arial, helvetica, sans-serif;
 }
 
-a:link {
+a:visited {
 color: #555555;
 }
 
@@ -30,21 +31,88 @@ a:hover {
 	text-decoration:underline;
 }
 
-header, .box {
-  font-family: verdana, arial, helvetica, sans-serif;
-}
 header {
 	width: 100%;
-    font-size: 13px;
     margin-left: 33px;
-    margin-top: 23px;
+    margin-top: 25px;
 }
 
-.top-box {
+.notice {
+	color: #006600;
+	width: 870px;
+	padding-left: 66px;
+	padding-top: 33px;
+	font-size: 13px;
+}
+
+.top-text {
 	width: 100%;
 	height: 100px;
-	font-size: 13px;
     margin-left: 65px;
     margin-top: 8px;
     line-height: 50px;
+    font-size: 13px;
+}
+
+main, .edit {
+	font-size: 13px;
+	width: 100%;
+	margin-left: 33px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.new {
+	padding-top: 30px;
+}
+
+.table {
+	border-collapse: separate;
+    border-spacing: 9px 9px;
+}
+
+.form {
+	line-height: 25px;
+}
+
+.error {
+	width: 450px;
+	text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0;
+    background-color: #c00;
+    color: #fff;
+}
+
+.field_with_errors {
+
+}
+
+.show {
+	width: 100%;
+	padding-left: 66px;
+	padding-top: 33px;
+	font-size: 13px;
+}
+
+.title, .body {
+	width: 100%;
+	padding-bottom: 33px;
+}
+
+.title-box, .body-box{
+	display: inline-block;
+	padding-right: 5px;
+}
+
+.text {
+	display: inline-block;
+}
+
+.link {
+	padding-left: 33px;
+	font-size: 13px;
 }

@@ -1,13 +1,15 @@
-<% if flash[:notice_d] %>
-  <p><%= flash[:notice_d] %></p>
-<% end %>
+  <% if flash[:notice_d] %><p class="notice"><%= flash[:notice_d] %></p><% end %>
 
+<header>
 <h1>Books</h1>
-<table>
-  <tr>
-　　<th>Title</th>
-　　<th>Body</th>
-  </tr>
+</header>
+
+<main>
+<table class="table">
+   <tr>
+　　 <th>Title</th>
+　　 <th>Body</th>
+   </tr>
   <% @books.each do |book| %>
     <tr>
 　　  <td><%= book.title %></td>
@@ -19,19 +21,27 @@
    <% end %>
 </table>
 
-<h4>New book</h4>
-<% if @book.errors.any? %>
-    <h3><%= @book.errors.count %>errors prohibited this book from being saved:</h3>
-    <ul>
-      <% @book.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-    </ul>
-<% end %>
-<%= form_for(@book) do |f| %>
-<p>Title</p>
-<%= f.text_field :title%>
-<p>Body</p>
-<%= f.text_area :body%><br>
-<%= f.submit 'Create Book' %>
-<% end %>
+<div class="new">
+ <h2>New book</h2>
+  <% if @book.errors.any? %>
+     <div class="error-message">
+      <h3 class="error"><%= @book.errors.count %>errors prohibited this book from being saved:</h3>
+      <ul>
+       <% @book.errors.full_messages.each do |message| %>
+         <li><%= message %></li>
+       <% end %>
+      </ul>
+  <% end %>
+ </div>
+
+  <div class="form">
+   <%= form_for(@book) do |f| %>
+     <p>Title</p>
+     <%= f.text_field :title%>
+     <p>Body</p>
+     <%= f.text_area :body%><br>
+     <%= f.submit 'Create Book' %>
+   <% end %>
+  </div>
+</div>
+</main>
