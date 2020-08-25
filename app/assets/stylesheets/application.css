@@ -31,6 +31,19 @@ a:hover {
 	text-decoration:underline;
 }
 
+input[type="text"],
+textarea {
+  outline: none;
+  border: 1px solid #aaa;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+input[type="text"]:focus,
+textarea:focus {
+  box-shadow: 0 0 7px #FFD700;
+  border: 1px solid #FFD700;
+}
+
 header {
 	width: 100%;
     margin-left: 33px;
@@ -54,16 +67,12 @@ header {
     font-size: 13px;
 }
 
-main, .edit {
+main {
 	font-size: 13px;
 	width: 100%;
 	margin-left: 33px;
 	margin-top: 10px;
 	margin-bottom: 10px;
-}
-
-.new {
-	padding-top: 30px;
 }
 
 .table {
@@ -72,23 +81,31 @@ main, .edit {
 }
 
 .form {
+	margin-top:16px;
 	line-height: 25px;
 }
 
 .error {
 	width: 450px;
+	height: 120px;
+	border: 2px solid;
+    border-color: #CC0000;
+    margin-top: 10px;
+    background-color: #EEEEEE;
+}
+
+.error-message {
+	width: 100%;
 	text-align: left;
-    font-weight: bold;
-    padding: 5px 5px 5px 15px;
     font-size: 12px;
-    margin: -7px;
-    margin-bottom: 0;
-    background-color: #c00;
+    padding: 5px 5px 5px 15px;
+    background-color: #CC0000;
     color: #fff;
 }
 
-.field_with_errors {
-
+.message-list {
+	position: relative;
+	left: 50px;
 }
 
 .show {
@@ -103,7 +120,7 @@ main, .edit {
 	padding-bottom: 33px;
 }
 
-.title-box, .body-box{
+.box {
 	display: inline-block;
 	padding-right: 5px;
 }
@@ -112,7 +129,22 @@ main, .edit {
 	display: inline-block;
 }
 
+.edit {
+	font-size: 13px;
+	width: 100%;
+	padding-left: 33px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.edit-form {
+	font-size: 13px;
+	margin-top: 16px;
+	line-height: 25px;
+}
+
 .link {
 	padding-left: 33px;
+	padding-top: 8px;
 	font-size: 13px;
 }
